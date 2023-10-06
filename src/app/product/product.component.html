@@ -1,0 +1,45 @@
+<div class="card-top container-fluid">
+    <div class="container d-flex">
+        <div class="item">
+            <a (click)="filter('')">
+                <img style="width: 75px; height: 75px;" src="https://www.ikea.com/in/en/images/products/latsas-12-piece-shopping-basket-set__0712405_pe728821_s5.jpg?f=s" alt="">
+                <h6>All Products</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('electronics')">
+                <img src="https://m.media-amazon.com/images/I/71gBQgKMdyL._AC_CR0%2C0%2C0%2C0_SX615_SY462_.jpg" alt="">
+                <h6>Electronics</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('fashion')">
+
+                <img src="https://m.media-amazon.com/images/I/71etIJtcrBL._AC_UF452,452_FMjpg_.jpg" alt="">
+                <h6>Fashion</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('jewelery')">
+                <img src="https://m.media-amazon.com/images/I/912iX-Sve0L._UL1500_.jpg" alt="">
+                <h6>Jewellery</h6>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+
+
+    <div class="row">
+        <ng-container *ngFor="let i of filterCategory | filt:searchKey:'title'">
+            <div class="card col-md-3">
+                <img src="{{i.image}}" alt="">
+                <h6 style="white-space: nowrap; overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{i.title}}</h6>
+                <p style="white-space: nowrap; overflow: hidden;text-overflow: ellipsis;max-width: 200ch;"> {{i.description}}</p>
+                <p><strong>${{i.price}}</strong></p>
+                <button class="btn btn-primary" (click)="addtocart(i)">Add to cart</button>
+            </div>
+        </ng-container>
+    </div>
+</div>

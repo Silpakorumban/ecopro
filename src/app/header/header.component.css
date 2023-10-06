@@ -1,0 +1,33 @@
+#forspace {
+    padding-left: 6%;
+    color: brown;
+}
+
+#img {
+    font-size: 25px;
+    padding-left: 6%;
+}
+
+.form1 {
+    padding-left: 1%;
+    border-radius: 3px;
+    margin-left: 20px;
+    width: 500px;
+    white-space: normal;
+}
+
+.selicon {
+    position: absolute;
+    z-index: 10;
+    color: brown;
+    right: 48%;
+    padding-top: 7px;
+}
+
+.carticon {
+    color: black;
+    right: 5%;
+    font-size: 20px;
+    padding-top: 7px;
+    font-size: 25px;
+}
